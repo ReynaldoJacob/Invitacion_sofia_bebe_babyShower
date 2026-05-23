@@ -10,11 +10,11 @@ import { ref } from 'vue';
 import InvitationEnvelope from './components/InvitationEnvelope.vue';
 import InvitationDetails from './components/InvitationDetails.vue';
 
-const alreadyOpened = localStorage.getItem('invitation_opened') === '1';
+const alreadyOpened = sessionStorage.getItem('invitation_opened') === '1';
 const currentView = ref(alreadyOpened ? 'invitation' : 'envelope');
 
 function onEnvelopeOpen() {
-    localStorage.setItem('invitation_opened', '1');
+    sessionStorage.setItem('invitation_opened', '1');
     currentView.value = 'invitation';
 }
 </script>
