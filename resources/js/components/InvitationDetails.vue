@@ -23,11 +23,11 @@
                 <div style="position:absolute; bottom:0; left:0; right:0; height:80%; background: linear-gradient(to bottom, transparent 0%, rgba(248,249,255,0.55) 45%, #f8f9ff 100%); pointer-events:none;"></div>
             </div>
             <div class="flex justify-center relative z-20" style="margin-top: -5rem;">
-                <div class="rounded-full p-2 shadow-xl" style="background:#f8f9ff;">
+                <div class="rounded-full p-2" style="background:#f8f9ff;">
                     <img
                         alt="Logo Naiara Sofía"
                         class="rounded-full object-contain"
-                        style="width: 12rem; height: 12rem;"
+                        style="width: 25rem; height: 25rem;"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdBzaE4U2SlRR7lgZGz3xjj-ePY9urCCGI8gG8Y8OyS3Oq4_luWiq6dLab0pSCJYdQmclsh6oOaG-NntTXwTRjQlZqMZ1cW1BBf677KAQ56jhLS1jie7CngMe2wLmg9refAlwWknqKggQkqWA7bxEh4eeMKTFsTB4UGmWLUG7ifaHTHBdj_Zi2GxRQsRI-yxDy0y1-Jq_vo3_Zv0839bHjUgsXPTUtc9cOKsjf9skekhNlYizlNdokCTwEe3Fe5rPwAhNUCuyzlG_e"
                     />
                 </div>
