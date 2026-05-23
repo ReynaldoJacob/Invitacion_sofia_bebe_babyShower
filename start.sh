@@ -32,11 +32,10 @@ php artisan db:seed --force
 echo "→ Enlazando storage..."
 php artisan storage:link 2>/dev/null || true
 
-echo "→ Cacheando config y vistas con variables de producción..."
+echo "→ Cacheando config con variables de producción..."
 php artisan config:clear
 php artisan view:clear
 php artisan config:cache
-php artisan view:cache
 
 echo "→ Iniciando servidor en puerto ${PORT:-8000}..."
 php artisan serve --host=0.0.0.0 --port="${PORT:-8000}"
