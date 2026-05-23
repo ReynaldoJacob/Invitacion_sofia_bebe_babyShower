@@ -143,8 +143,8 @@
                                 <img
                                     class="w-full object-cover"
                                     style="height: 300px;"
-                                    alt="Decoración para baby shower con tema de abejas y margaritas"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuACz1gXDC6GHEqoob_YZEJOfFOFTWsSAvwxADOIJSLnV9A_kQtIiBiLwowZiZsbq9PeyY4xULKblqWusxtikheT7CF4NAzBeJQVtt-TQUIK7-Vk3HMNadM1pL8cgXJIvKDh65u2Ay3oeJQ6RiJJnzAZ2tzTVk1AvyKVAM0AAX5JO1Bvt80KpetB9pmA0W79mQJ-mWcQnnw8vXik8s7-ND2y5w2R8HP-jSg-i1tbPRE88dNC3-t-6yLHtOEYubnrmONpzb2zv9ehlQi2"
+                                    alt="Salón del evento"
+                                    src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcaA3OUw3vlpXdHlzQIcLuTgChbxfjpKHQUwISQBUkQ40bBclHL01nQZDSCobitZbUszWURlKN-hb_MmxXUBXnsVkjcIC4YmEol59GnUh0tTwYqj1lbnKm29mQysyTpvDXCXdA=s1360-w1360-h1020-rw"
                                 />
                             </div>
                             <!-- Bee decoration -->
