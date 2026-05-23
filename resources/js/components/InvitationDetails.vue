@@ -48,7 +48,7 @@
                 <div class="max-w-4xl mx-auto relative" style="z-index:10;">
 
                     <!-- Fecha y horario -->
-                    <div class="flex items-center justify-center gap-6 mb-12" style="color: rgba(115,92,0,0.8);">
+                    <div class="scroll-reveal flex items-center justify-center gap-6 mb-12" style="color: rgba(115,92,0,0.8);">
                         <div style="font-family:'Bubblegum Sans',cursive; font-size:1.25rem; letter-spacing:0.1em; text-transform:uppercase;">Sab</div>
                         <div style="width:1px; height:3rem; background:rgba(115,92,0,0.2);"></div>
                         <div class="flex flex-col items-center">
@@ -64,13 +64,13 @@
                     </div>
 
                     <!-- Quote -->
-                    <p class="max-w-2xl mx-auto mb-12"
+                    <p class="scroll-reveal max-w-2xl mx-auto mb-12"
                        style="font-family:'Bubblegum Sans',cursive; font-size:22px; line-height:34px; color:#4d4635;">
                         "¡Estamos esperando a nuestra pequeña abejita!"
                     </p>
 
                     <!-- Countdown card -->
-                    <div class="max-w-md mx-auto mb-16">
+                    <div class="scroll-reveal max-w-md mx-auto mb-16">
                         <div class="flex flex-col items-center gap-6 p-8"
                              style="background-color:rgba(255,253,240,0.5); border-radius:2rem; border:1px solid rgba(255,255,255,0.6); box-shadow:0 10px 25px -5px rgba(0,0,0,0.1),0 8px 10px -6px rgba(0,0,0,0.1); backdrop-filter:blur(8px);">
                             <h3 style="font-family:'Bubblegum Sans',cursive; font-size:1.5rem; color:#735c00;">
@@ -237,10 +237,28 @@ onMounted(() => {
     computeTimeLeft();
     countdownTimer = setInterval(computeTimeLeft, 60000);
     launchBees();
+
+    // Scroll reveal — efecto abejita aterrizando (spring)
+    const revealEls = document.querySelectorAll('.scroll-reveal');
+    revealEls.forEach((el, i) => {
+        el.style.transitionDelay = `${i * 0.13}s`;
+    });
+    revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('bee-revealed');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -20px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
 });
+
+let revealObserver = null;
 
 onUnmounted(() => {
     clearInterval(countdownTimer);
+    if (revealObserver) revealObserver.disconnect();
 });
 </script>
 
@@ -257,6 +275,18 @@ onUnmounted(() => {
 }
 .bee-float {
     animation: inv-float 4s ease-in-out infinite;
+}
+/* Scroll reveal — abejita aterrizando */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px) rotate(-3deg) scale(0.96);
+    transition:
+        opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+        transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.scroll-reveal.bee-revealed {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
 }
 @keyframes inv-float {
     0%   { transform: translateY(0px) rotate(0deg); }

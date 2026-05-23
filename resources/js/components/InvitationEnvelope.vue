@@ -72,13 +72,19 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const emit = defineEmits(['open']);
 
 const isOpen = ref(false);
 const showCountdown = ref(false);
 const countdown = ref(3);
+
+// Precargar audio para que no haya delay al dar click
+const bgAudio = new Audio('/audio/InsideOut_trim.mp3');
+bgAudio.preload = 'auto';
+bgAudio.volume = 0.8;
+bgAudio.playbackRate = 0.8;
 
 function openEnvelope() {
     if (isOpen.value) return;
@@ -93,6 +99,8 @@ function openEnvelope() {
     setTimeout(() => { countdown.value = 1; }, 2000);
     setTimeout(() => {
         showCountdown.value = false;
+        // Reproducir audio al terminar el countdown
+        bgAudio.play().catch(() => {});
         emit('open');
     }, 3000);
 }
