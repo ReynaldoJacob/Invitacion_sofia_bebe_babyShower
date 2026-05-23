@@ -10,7 +10,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&family=Great+Vibes&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
 
     <!-- Tailwind custom theme -->
     <script>
@@ -220,7 +220,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body style="background:#1a1a1a; display:flex; align-items:center; justify-content:center; height:100vh; width:100vw; margin:0; padding:0; overflow:hidden;">
-    <div id="app" style="width:390px; max-width:100vw; height:100vh; max-height:844px; position:relative; overflow:hidden;"></div>
+<body style="margin:0; padding:0; overflow:hidden;">
+    <div id="app" style="width:100vw; height:100dvh; position:relative; overflow:hidden;"></div>
 </body>
 </html>
