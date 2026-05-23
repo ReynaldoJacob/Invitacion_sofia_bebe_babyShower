@@ -221,6 +221,6 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body style="margin:0; padding:0;">
-    <div id="app"></div>
+    <div id="app" style="position:relative; min-height:100dvh;"></div>
 </body>
 </html>
