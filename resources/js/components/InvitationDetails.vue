@@ -66,7 +66,8 @@
                     <!-- Quote -->
                     <p class="scroll-reveal max-w-2xl mx-auto mb-12"
                        style="font-family:'Bubblegum Sans',cursive; font-size:22px; line-height:34px; color:#4d4635;">
-                        "¡Estamos esperando a nuestra pequeña abejita!"
+                        "La dulce espera está por terminar
+con amor e ilusión esperamos su llegada"
                     </p>
 
                     <!-- Countdown card -->
@@ -128,13 +129,13 @@
 
                     <!-- Card Confirmar Asistencia -->
                     <div class="max-w-md mx-auto mt-4">
-                        <a href="#" style="background-color:rgba(255,253,240,0.5);" class="ripple-button group flex flex-col items-center justify-center p-8 bg-white/50 backdrop-blur-sm rounded-3xl border border-primary/5 hover:bg-white/70 transition-all duration-500 relative overflow-hidden scroll-reveal">
+                        <RouterLink :to="linkId ? { path: '/rsvp', query: { link_id: linkId, nombre: guestName } } : '/rsvp'" style="background-color:rgba(255,253,240,0.5);" class="ripple-button group flex flex-col items-center justify-center p-8 bg-white/50 backdrop-blur-sm rounded-3xl border border-primary/5 hover:bg-white/70 transition-all duration-500 relative overflow-hidden scroll-reveal">
                             <div class="w-12 h-12 rounded-full bg-primary/5 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                 <span class="material-symbols-outlined text-2xl" data-icon="favorite_border">favorite_border</span>
                             </div>
                             <span style="font-family:'Bubblegum Sans',cursive; font-size:13px; color:#4d4635; letter-spacing:0.15em; text-transform:uppercase;">Confirmar Asistencia</span>
                             <span style="font-family:'Itim',cursive; font-size:11px; color:#735c00; margin-top:2px;">Antes del 1 de Junio</span>
-                        </a>
+                        </RouterLink>
                     </div>
 
                     <!-- Card Mesa de Regalos -->
@@ -166,6 +167,11 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+
+const props = defineProps({
+    guestName: { type: String, default: '' },
+    linkId:    { type: String, default: '' },
+});
 
 // --- Countdown ---
 const EVENT_DATE = new Date('2026-06-20T13:00:00');

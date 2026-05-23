@@ -17,6 +17,13 @@
                     <div class="card shadow-soft-amber p-4 text-center">
                         <span class="font-display-name text-headline-md text-primary mb-2">Naiara Sofía</span>
                         <span class="font-body-sm text-on-surface-variant">Estás invitado...</span>
+                        <!-- Nombre personalizado -->
+                        <div v-if="guestName" class="mt-3 px-3 py-1.5 rounded-full inline-block"
+                             style="background:rgba(251,211,77,0.25); border:1px solid rgba(251,211,77,0.5);">
+                            <span style="font-family:'Itim',cursive; font-size:12px; color:#715b00; letter-spacing:0.04em;">
+                                Para: <strong>{{ guestName }}</strong>
+                            </span>
+                        </div>
                         <div class="flex justify-center items-center gap-2 mt-4">
                             <span class="w-1 h-1 rounded-full bg-primary-container"></span>
                             <span class="w-2 h-2 rounded-full bg-primary-container"></span>
@@ -73,6 +80,10 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+
+const props = defineProps({
+    guestName: { type: String, default: '' },
+});
 
 const emit = defineEmits(['open']);
 
