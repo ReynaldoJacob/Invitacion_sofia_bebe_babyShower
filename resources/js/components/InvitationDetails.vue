@@ -52,8 +52,8 @@
                         <div style="font-family:'Bubblegum Sans',cursive; font-size:1.25rem; letter-spacing:0.1em; text-transform:uppercase;">Sab</div>
                         <div style="width:1px; height:3rem; background:rgba(115,92,0,0.2);"></div>
                         <div class="flex flex-col items-center">
-                            <span style="font-family:'Bubblegum Sans',cursive; font-size:3rem; font-weight:400; line-height:1;">09</span>
-                            <span style="font-family:'Itim',cursive; font-size:11px; letter-spacing:0.3em; font-weight:400; text-transform:uppercase; margin-top:4px;">May</span>
+                            <span style="font-family:'Bubblegum Sans',cursive; font-size:3rem; font-weight:400; line-height:1;">20</span>
+                            <span style="font-family:'Itim',cursive; font-size:11px; letter-spacing:0.3em; font-weight:400; text-transform:uppercase; margin-top:4px;">Jun</span>
                         </div>
                         <div style="width:1px; height:3rem; background:rgba(115,92,0,0.2);"></div>
                         <div class="text-left" style="font-family:'Itim',cursive;">
@@ -74,7 +74,7 @@
                         <div class="flex flex-col items-center gap-6 p-8"
                              style="background-color:rgba(255,253,240,0.5); border-radius:2rem; border:1px solid rgba(255,255,255,0.6); box-shadow:0 10px 25px -5px rgba(0,0,0,0.1),0 8px 10px -6px rgba(0,0,0,0.1); backdrop-filter:blur(8px);">
                             <h3 style="font-family:'Bubblegum Sans',cursive; font-size:1.5rem; color:#735c00;">
-                                Faltan para el momento
+                                Para la celebración faltan...
                             </h3>
                             <div class="flex justify-center gap-3 w-full">
                                 <div class="flex flex-col items-center flex-1 rounded-xl p-3"
@@ -168,7 +168,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 // --- Countdown ---
-const EVENT_DATE = new Date('2026-06-15T16:00:00');
+const EVENT_DATE = new Date('2026-06-20T13:00:00');
 
 const timeLeft = ref({ days: 0, hours: 0, minutes: 0 });
 

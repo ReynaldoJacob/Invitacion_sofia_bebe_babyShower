@@ -1,6 +1,6 @@
 <template>
     <Transition name="page-fade" mode="out-in">
-        <InvitationEnvelope v-if="currentView === 'envelope'" key="envelope" @open="currentView = 'invitation'" />
+        <InvitationEnvelope v-if="currentView === 'envelope'" key="envelope" @open="onEnvelopeOpen" />
         <InvitationDetails v-else key="invitation" />
     </Transition>
 </template>
@@ -10,7 +10,13 @@ import { ref } from 'vue';
 import InvitationEnvelope from './components/InvitationEnvelope.vue';
 import InvitationDetails from './components/InvitationDetails.vue';
 
-const currentView = ref('envelope');
+const alreadyOpened = localStorage.getItem('invitation_opened') === '1';
+const currentView = ref(alreadyOpened ? 'invitation' : 'envelope');
+
+function onEnvelopeOpen() {
+    localStorage.setItem('invitation_opened', '1');
+    currentView.value = 'invitation';
+}
 </script>
 
 <style>
