@@ -1,10 +1,7 @@
 <template>
-    <div>
-        <slot />
-    </div>
+    <InvitationEnvelope />
 </template>
 
 <script setup>
-// Componente raíz de Vue.
-// Agrega aquí tus componentes o lógica reactiva global.
+import InvitationEnvelope from './components/InvitationEnvelope.vue';
 </script>
