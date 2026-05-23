@@ -22,7 +22,7 @@
             <div class="max-w-2xl mx-auto">
 
                 <!-- Título -->
-                <div class="text-center mb-8">
+                <div class="scroll-reveal text-center mb-8">
                     <h1 style="font-family:'Bubblegum Sans',cursive; font-size:clamp(1.6rem,5vw,2.4rem); color:#735c00; margin-bottom:8px;">
                         Ubicación del Evento
                     </h1>
@@ -36,7 +36,7 @@
                 </div>
 
                 <!-- Card Ubicación -->
-                <div class="rounded-3xl overflow-hidden"
+                <div class="scroll-reveal rounded-3xl overflow-hidden"
                      style="background-color:rgba(255,253,240,0.5); border:1px solid rgba(255,255,255,0.6); box-shadow:0 10px 25px -5px rgba(0,0,0,0.1),0 8px 10px -6px rgba(0,0,0,0.1); backdrop-filter:blur(8px);">
 
                     <div class="p-6 md:p-8">
@@ -117,13 +117,13 @@
                         <a href="https://www.google.com/maps/place/Sal%C3%B3n+de+eventos+%22El+Tr%C3%A9bol%22/@19.275199,-103.7822294,13.34z/data=!4m15!1m8!3m7!1s0x8425453ee675017d:0xb7b213275f421382!2sCdad.+de+Villa+de+%C3%81lvarez,+Col.,+M%C3%A9xico!3b1!8m2!3d19.2662338!4d-103.7390574!16s%2Fm%2F02q1744!3m5!1s0x842545b5a172e3cb:0x5a94803413497f21!8m2!3d19.2641668!4d-103.7837397!16s%2Fg%2F11sdq46__1?hl=es-419&entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
                            target="_blank"
                            rel="noopener noreferrer"
-                           class="flex items-center justify-center gap-2 w-full py-4 rounded-full transition-all hover:opacity-90 hover:scale-[1.02]"
+                           class="scroll-reveal flex items-center justify-center gap-2 w-full py-4 rounded-full transition-all hover:opacity-90 hover:scale-[1.02]"
                            style="background:#fbd34d; color:#715b00; font-family:'Bubblegum Sans',cursive; font-size:1rem; letter-spacing:0.05em; box-shadow:0 4px 12px rgba(251,211,77,0.4);">
                             <span class="material-symbols-outlined" style="font-size:1.1rem;">map</span>
                             Abrir en Google Maps
                         </a>
                         <!-- Aviso alberca --><br><br>
-                        <div class="flex items-start gap-3 rounded-2xl p-4 mb-6"
+                        <div class="scroll-reveal flex items-start gap-3 rounded-2xl p-4 mb-6"
                              style="background:rgba(200,235,255,0.45); border:1px solid rgba(100,180,255,0.3);">
                             <span class="material-symbols-outlined mt-0.5" style="color:#3a88c5; font-size:1.4rem; flex-shrink:0; font-variation-settings:'FILL' 1;">pool</span>
                             <div>
@@ -164,7 +164,29 @@
 </template>
 
 <script setup>
-// Sin lógica reactiva por ahora — vista estática
+import { onMounted, onUnmounted } from 'vue';
+
+let revealObserver = null;
+
+onMounted(() => {
+    const revealEls = document.querySelectorAll('.scroll-reveal');
+    revealEls.forEach((el, i) => {
+        el.style.transitionDelay = `${i * 0.13}s`;
+    });
+    revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('bee-revealed');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -20px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+});
+
+onUnmounted(() => {
+    if (revealObserver) revealObserver.disconnect();
+});
 </script>
 
 <style>
@@ -185,5 +207,17 @@
 .map-preview-link:hover {
     transform: scale(1.01);
     box-shadow: 0 6px 20px rgba(115,92,0,0.15);
+}
+/* Scroll reveal — abejita aterrizando */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px) rotate(-3deg) scale(0.96);
+    transition:
+        opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+        transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.scroll-reveal.bee-revealed {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
 }
 </style>
