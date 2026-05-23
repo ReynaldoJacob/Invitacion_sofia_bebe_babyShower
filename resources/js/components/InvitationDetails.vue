@@ -9,19 +9,21 @@
             style="background-image: url('/images/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.12; z-index: -1;"
         ></div>
 
-        <!-- Header -->
-        <header class="relative w-full bg-white">
+        <!-- Header (imagen local con fade inferior + logo) -->
+        <header class="relative w-full" style="background:#f8f9ff;">
             <div style="position:relative; width:100%; height: clamp(180px, 40vw, 380px); overflow:hidden;">
                 <img
                     alt="Ilustración de abejas y colmena"
                     style="width:100%; height:100%; object-fit:cover; object-position: center top; display:block;"
                     src="/images/background.jpg"
                 />
-                <!-- Fade inferior -->
-                <div style="position:absolute; bottom:0; left:0; right:0; height:50%; background: linear-gradient(to bottom, transparent, #ffffff); pointer-events:none;"></div>
+                <!-- fade superior -->
+                <div style="position:absolute; top:0; left:0; right:0; height:20%; background: linear-gradient(to bottom, #f8f9ff 0%, transparent 100%); pointer-events:none;"></div>
+                <!-- fade inferior -->
+                <div style="position:absolute; bottom:0; left:0; right:0; height:80%; background: linear-gradient(to bottom, transparent 0%, rgba(248,249,255,0.55) 45%, #f8f9ff 100%); pointer-events:none;"></div>
             </div>
             <div class="flex justify-center relative z-20" style="margin-top: -5rem;">
-                <div class="bg-white rounded-full p-2 shadow-xl">
+                <div class="rounded-full p-2 shadow-xl" style="background:#f8f9ff;">
                     <img
                         alt="Logo Naiara Sofía"
                         class="rounded-full object-contain"
@@ -34,138 +36,129 @@
 
         <!-- Main -->
         <main>
-            <!-- Hero Section -->
-            <section class="relative text-center overflow-hidden pb-12 px-4 md:px-10">
+            <section class="relative px-4 md:px-10 text-center overflow-hidden pb-12" style="padding-top: 3rem;">
                 <!-- Decorativos desktop -->
                 <div class="absolute top-10 left-10 bee-float opacity-80 hidden md:block">
-                    <span class="material-symbols-outlined text-primary-container text-6xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+                    <span class="material-symbols-outlined text-6xl" style="color:#fbd34d; font-variation-settings: 'FILL' 1;">eco</span>
                 </div>
                 <div class="absolute top-40 right-20 bee-float opacity-80 hidden md:block" style="animation-delay: 0.7s;">
-                    <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    <span class="material-symbols-outlined text-4xl" style="color:#735c00; font-variation-settings: 'FILL' 1;">favorite</span>
                 </div>
 
                 <div class="max-w-4xl mx-auto relative" style="z-index:10;">
-                    <p class="text-on-surface-variant mb-12 max-w-2xl mx-auto italic"
-                       style="font-family:'Playfair Display',serif; font-size:24px; line-height:32px; font-weight:600;">
+
+                    <!-- Fecha y horario -->
+                    <div class="flex items-center justify-center gap-6 mb-12" style="color: rgba(115,92,0,0.8);">
+                        <div style="font-family:'Bubblegum Sans',cursive; font-size:1.25rem; letter-spacing:0.1em; text-transform:uppercase;">Sab</div>
+                        <div style="width:1px; height:3rem; background:rgba(115,92,0,0.2);"></div>
+                        <div class="flex flex-col items-center">
+                            <span style="font-family:'Bubblegum Sans',cursive; font-size:3rem; font-weight:400; line-height:1;">09</span>
+                            <span style="font-family:'Itim',cursive; font-size:11px; letter-spacing:0.3em; font-weight:400; text-transform:uppercase; margin-top:4px;">May</span>
+                        </div>
+                        <div style="width:1px; height:3rem; background:rgba(115,92,0,0.2);"></div>
+                        <div class="text-left" style="font-family:'Itim',cursive;">
+                            <div style="font-size:1.125rem; line-height:1.4;">1:00 pm</div>
+                            <div style="font-size:0.875rem; opacity:0.7;">a</div>
+                            <div style="font-size:1.125rem; line-height:1.4;">7:00 pm</div>
+                        </div>
+                    </div>
+
+                    <!-- Quote -->
+                    <p class="max-w-2xl mx-auto mb-12"
+                       style="font-family:'Bubblegum Sans',cursive; font-size:22px; line-height:34px; color:#4d4635;">
                         "¡Estamos esperando a nuestra pequeña abejita!"
                     </p>
 
-                    <!-- Countdown -->
-                    <div class="flex justify-center gap-4 md:gap-8 mb-16 w-full">
-                        <div class="flex flex-col items-center bg-white rounded-2xl shadow-sm flex-1 p-4" style="border: 1px solid rgba(251,211,77,0.2); min-width: 80px;">
-                            <span class="font-display-name text-4xl text-primary" style="font-family:'Plus Jakarta Sans',sans-serif; font-size:2.5rem; font-weight:700; color:#735c00;">{{ timeLeft.days }}</span>
-                            <span class="uppercase" style="font-family:'Be Vietnam Pro',sans-serif; font-size:14px; font-weight:600; color:#4d4635; letter-spacing:0.05em;">Días</span>
-                        </div>
-                        <div class="flex flex-col items-center bg-white rounded-2xl shadow-sm flex-1 p-4" style="border: 1px solid rgba(251,211,77,0.2); min-width: 80px;">
-                            <span class="font-display-name text-4xl text-primary" style="font-family:'Plus Jakarta Sans',sans-serif; font-size:2.5rem; font-weight:700; color:#735c00;">{{ timeLeft.hours }}</span>
-                            <span class="uppercase" style="font-family:'Be Vietnam Pro',sans-serif; font-size:14px; font-weight:600; color:#4d4635; letter-spacing:0.05em;">Horas</span>
-                        </div>
-                        <div class="flex flex-col items-center bg-white rounded-2xl shadow-sm flex-1 p-4" style="border: 1px solid rgba(251,211,77,0.2); min-width: 80px;">
-                            <span class="font-display-name text-4xl text-primary" style="font-family:'Plus Jakarta Sans',sans-serif; font-size:2.5rem; font-weight:700; color:#735c00;">{{ timeLeft.minutes }}</span>
-                            <span class="uppercase" style="font-family:'Be Vietnam Pro',sans-serif; font-size:14px; font-weight:600; color:#4d4635; letter-spacing:0.05em;">Min</span>
+                    <!-- Countdown card -->
+                    <div class="max-w-md mx-auto mb-16">
+                        <div class="flex flex-col items-center gap-6 p-8"
+                             style="background-color:rgba(255,253,240,0.5); border-radius:2rem; border:1px solid rgba(255,255,255,0.6); box-shadow:0 10px 25px -5px rgba(0,0,0,0.1),0 8px 10px -6px rgba(0,0,0,0.1); backdrop-filter:blur(8px);">
+                            <h3 style="font-family:'Bubblegum Sans',cursive; font-size:1.5rem; color:#735c00;">
+                                Faltan para el momento
+                            </h3>
+                            <div class="flex justify-center gap-3 w-full">
+                                <div class="flex flex-col items-center flex-1 rounded-xl p-3"
+                                     style="background:rgba(255,255,255,0.6); border:1px solid rgba(251,211,77,0.2); min-width:72px;">
+                                    <span style="font-family:'Bubblegum Sans',cursive; font-size:1.875rem; color:#735c00;">{{ timeLeft.days }}</span>
+                                    <span style="font-family:'Itim',cursive; font-size:11px; color:#4d4635; letter-spacing:0.1em; text-transform:uppercase;">Días</span>
+                                </div>
+                                <div class="flex flex-col items-center flex-1 rounded-xl p-3"
+                                     style="background:rgba(255,255,255,0.6); border:1px solid rgba(251,211,77,0.2); min-width:72px;">
+                                    <span style="font-family:'Bubblegum Sans',cursive; font-size:1.875rem; color:#735c00;">{{ timeLeft.hours }}</span>
+                                    <span style="font-family:'Itim',cursive; font-size:11px; color:#4d4635; letter-spacing:0.1em; text-transform:uppercase;">Horas</span>
+                                </div>
+                                <div class="flex flex-col items-center flex-1 rounded-xl p-3"
+                                     style="background:rgba(255,255,255,0.6); border:1px solid rgba(251,211,77,0.2); min-width:72px;">
+                                    <span style="font-family:'Bubblegum Sans',cursive; font-size:1.875rem; color:#735c00;">{{ timeLeft.minutes }}</span>
+                                    <span style="font-family:'Itim',cursive; font-size:11px; color:#4d4635; letter-spacing:0.1em; text-transform:uppercase;">Min</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Buttons -->
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <button class="flex items-center justify-center gap-2 w-full px-10 py-4 rounded-full shadow-md transition-transform hover:scale-95"
-                                style="background:#fbd34d; color:#715b00; font-family:'Be Vietnam Pro',sans-serif; font-size:14px; font-weight:600;">
-                            <span class="material-symbols-outlined">calendar_today</span>
-                            Ver Detalles del Evento
-                        </button>
-                        <button class="flex items-center justify-center gap-2 w-full px-10 py-4 rounded-full transition-all"
-                                style="border: 2px solid #fbd34d; color:#735c00; font-family:'Be Vietnam Pro',sans-serif; font-size:14px; font-weight:600; background:transparent;">
+                    <!-- Botón Mesa de Regalos -->
+                    <!-- <div class="flex justify-center mb-12">
+                        <button class="flex items-center justify-center gap-2 px-10 py-4 rounded-full transition-all w-full max-w-md"
+                                style="border:2px solid #fbd34d; color:#735c00; font-family:'Be Vietnam Pro',sans-serif; font-size:14px; font-weight:600; background:transparent;">
                             <span class="material-symbols-outlined">favorite</span>
                             Mesa de Regalos
                         </button>
+                    </div> -->
+
+                    <!-- Card Ubicación -->
+                    <!-- <div class="max-w-md mx-auto mt-4">
+                        <div class="flex flex-col items-center gap-3 p-8"
+                             style="background-color:rgba(255,253,240,0.5); border-radius:2rem; border:1px solid rgba(255,255,255,0.6); box-shadow:0 10px 25px -5px rgba(0,0,0,0.1),0 8px 10px -6px rgba(0,0,0,0.1); backdrop-filter:blur(8px);">
+                            <span class="material-symbols-outlined" style="font-size:1.875rem; color:#735c00; font-variation-settings:'FILL' 0,'wght' 300;">location_on</span>
+                            <a class="inline-flex items-center justify-center gap-2 hover:opacity-70 transition-opacity"
+                               style="font-family:'Playfair Display',serif; font-size:1.25rem; font-style:italic; color:#735c00; font-weight:700;" href="#">
+                                Ver Ubicación <span class="material-symbols-outlined" style="font-size:0.875rem;">east</span>
+                            </a>
+                        </div>
+                    </div> -->
+                    <div class="max-w-md mx-auto mt-4">
+                        <a  :href="linkId ? '/lugar?link_id=' + linkId : '/lugar'" style="background-color:rgba(255,253,240,0.5);" class="ripple-button group flex flex-col items-center justify-center p-8 bg-white/50 backdrop-blur-sm rounded-3xl border border-primary/5 hover:bg-white/70 transition-all duration-500 relative overflow-hidden scroll-reveal">
+                            <div class="w-12 h-12 rounded-full bg-primary/5 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-2xl" data-icon="location_on">location_on</span>
+                            </div>
+                            <span style="font-family:'Bubblegum Sans',cursive; font-size:13px; color:#4d4635; letter-spacing:0.15em; text-transform:uppercase;">Lugar</span>
+                            <span style="font-family:'Itim',cursive; font-size:11px; color:#735c00; margin-top:2px;">Ver mapa y dirección</span>
+                        </a>
                     </div>
+
+                    <!-- Card Confirmar Asistencia -->
+                    <div class="max-w-md mx-auto mt-4">
+                        <a href="#" style="background-color:rgba(255,253,240,0.5);" class="ripple-button group flex flex-col items-center justify-center p-8 bg-white/50 backdrop-blur-sm rounded-3xl border border-primary/5 hover:bg-white/70 transition-all duration-500 relative overflow-hidden scroll-reveal">
+                            <div class="w-12 h-12 rounded-full bg-primary/5 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-2xl" data-icon="favorite_border">favorite_border</span>
+                            </div>
+                            <span style="font-family:'Bubblegum Sans',cursive; font-size:13px; color:#4d4635; letter-spacing:0.15em; text-transform:uppercase;">Confirmar Asistencia</span>
+                            <span style="font-family:'Itim',cursive; font-size:11px; color:#735c00; margin-top:2px;">Antes del 1 de Junio</span>
+                        </a>
+                    </div>
+
+                    <!-- Card Mesa de Regalos -->
+                    <div class="max-w-md mx-auto mt-4 mb-8">
+                        <a href="#" style="background-color:rgba(255,253,240,0.5);" class="ripple-button group flex flex-col items-center justify-center p-8 bg-white/50 backdrop-blur-sm rounded-3xl border border-primary/5 hover:bg-white/70 transition-all duration-500 relative overflow-hidden scroll-reveal">
+                            <div class="w-12 h-12 rounded-full bg-primary/5 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-2xl" data-icon="card_giftcard">card_giftcard</span>
+                            </div>
+                            <span style="font-family:'Bubblegum Sans',cursive; font-size:13px; color:#4d4635; letter-spacing:0.15em; text-transform:uppercase;">Mesa de Regalos</span>
+                            <span style="font-family:'Itim',cursive; font-size:11px; color:#735c00; margin-top:2px;">Ver lista de regalos</span>
+                        </a>
+                    </div>
+
                 </div>
             </section>
 
-            <!-- Venue Section -->
-            <section class="py-24 px-4 md:px-10" style="background: linear-gradient(to bottom, transparent, #eff4ff 150px, #eff4ff);">
-                <div class="max-w-6xl mx-auto">
-                    <div class="flex flex-col md:flex-row gap-12 items-center">
-                        <!-- Left: date & location -->
-                        <div class="w-full md:w-1/2 space-y-8 text-center">
-                            <div class="space-y-4">
-                                <h2 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:3rem; font-weight:700; color:#735c00; line-height:1.1;">
-                                    ¿Cuándo y Dónde?
-                                </h2>
-                                <p style="color:#4d4635; font-family:'Be Vietnam Pro',sans-serif; font-size:18px;">
-                                    No faltes a nuestra celebración en el jardín de las abejitas.
-                                </p>
-                            </div>
-
-                            <div class="space-y-6">
-                                <!-- Date -->
-                                <div class="flex flex-col items-center gap-4 p-8 rounded-xl transition-all"
-                                     style="background: rgba(255,255,255,0.5); border: 1px solid rgba(115,92,0,0.05); backdrop-filter: blur(4px);">
-                                    <div class="p-2.5 rounded-full" style="background: rgba(115,92,0,0.1);">
-                                        <span class="material-symbols-outlined" style="color: rgba(115,92,0,0.8); font-size:20px;">calendar_today</span>
-                                    </div>
-                                    <div class="text-center">
-                                        <h4 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.5rem; font-weight:700; color:#0d1c2f; margin-bottom:4px;">
-                                            Sábado, 20 de Junio
-                                        </h4>
-                                        <div style="height:1px; width:2rem; background:rgba(115,92,0,0.2); margin:12px auto;"></div>
-                                        <p style="font-family:'Be Vietnam Pro',sans-serif; font-size:12px; color:#4d4635; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;">
-                                            A partir de las 4:00 PM
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Location -->
-                                <div class="flex flex-col items-center gap-4 p-8 rounded-xl transition-all"
-                                     style="background: rgba(255,255,255,0.5); border: 1px solid rgba(115,92,0,0.05); backdrop-filter: blur(4px);">
-                                    <div class="p-2.5 rounded-full" style="background: rgba(115,92,0,0.1);">
-                                        <span class="material-symbols-outlined" style="color: rgba(115,92,0,0.8); font-size:20px;">location_on</span>
-                                    </div>
-                                    <div class="text-center">
-                                        <h4 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.5rem; font-weight:700; color:#0d1c2f; margin-bottom:4px;">
-                                            Salón de eventos "El Trébol"
-                                        </h4>
-                                        <p style="color:#4d4635; font-family:'Be Vietnam Pro',sans-serif; font-size:14px; margin-bottom:16px;">
-                                            28984 Cdad. de Villa de Álvarez, Col.
-                                        </p>
-                                        <button class="inline-flex items-center gap-2 hover:opacity-70 transition-opacity"
-                                                style="color:#735c00; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; font-family:'Be Vietnam Pro',sans-serif;">
-                                            Ver mapa <span class="material-symbols-outlined" style="font-size:12px;">open_in_new</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Right: image -->
-                        <div class="w-full md:w-1/2 relative">
-                            <div class="relative rounded-[40px] overflow-hidden shadow-2xl" style="border: 8px solid #ffffff;">
-                                <img
-                                    class="w-full object-cover"
-                                    style="height: 300px;"
-                                    alt="Salón del evento"
-                                    src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcaA3OUw3vlpXdHlzQIcLuTgChbxfjpKHQUwISQBUkQ40bBclHL01nQZDSCobitZbUszWURlKN-hb_MmxXUBXnsVkjcIC4YmEol59GnUh0tTwYqj1lbnKm29mQysyTpvDXCXdA=s1360-w1360-h1020-rw"
-                                />
-                            </div>
-                            <!-- Bee decoration -->
-                            <div class="absolute -bottom-8 -right-8 p-6 rounded-full shadow-lg bee-float"
-                                 style="background:#fbd34d;">
-                                <span class="material-symbols-outlined text-4xl" style="color:#715b00; font-variation-settings: 'FILL' 1; font-size:2.25rem;">eco</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Footer wildflower image -->
-            <div style="position:relative; width:100%; height:300px; overflow:hidden; background-color:#eff4ff; margin-top:-2px;">
+            <!-- Footer (imagen local con fade superior) -->
+            <div style="position:relative; width:100%; height:300px; overflow:hidden; background-color:#f8f9ff; margin-top:-2px;">
                 <img
                     alt="Campo de flores silvestres"
-                    style="width:100%; height:100%; object-fit:cover; object-position: center bottom; display:block;"
+                    style="width:100%; height:100%; object-fit:cover; object-position:center bottom; display:block;"
                     src="/images/background.jpg"
                 />
-                <!-- Fade superior que disimula el corte con la sección anterior -->
-                <div style="position:absolute; top:0; left:0; right:0; height:55%; background: linear-gradient(to bottom, #eff4ff 0%, transparent 100%); pointer-events:none; z-index:1;"></div>
+                <div style="position:absolute; top:0; left:0; right:0; height:55%; background:linear-gradient(to bottom, #f8f9ff 0%, transparent 100%); pointer-events:none; z-index:1;"></div>
             </div>
         </main>
     </div>
@@ -259,7 +252,7 @@ onUnmounted(() => {
     overflow-x: hidden;
     z-index: 50;
     background-color: #f8f9ff;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Itim', cursive;
     color: #0d1c2f;
 }
 .bee-float {
