@@ -107,68 +107,69 @@
                     <div
                         v-for="guest in filteredGuests"
                         :key="guest.id"
-                        class="card-surface p-4 flex justify-between items-center"
+                        class="card-surface p-4"
                         :style="borderStyle(guest.status)"
                     >
-                        <div class="flex items-center gap-3">
-                            <!-- Avatar inicial -->
-                            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-base flex-shrink-0"
-                                 style="background:rgba(251,211,77,0.2); color:#735c00;">
-                                {{ initials(guest.name) }}
+                        <div class="flex justify-between items-start gap-2">
+                            <div class="flex items-start gap-3 min-w-0">
+                                <!-- Avatar inicial -->
+                                <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0"
+                                     style="background:rgba(251,211,77,0.2); color:#735c00;">
+                                    {{ initials(guest.name) }}
+                                </div>
+                                <div class="min-w-0">
+                                    <!-- Para quién va dirigida la invitación -->
+                                    <div class="flex items-center gap-1 flex-wrap">
+                                        <span class="material-symbols-outlined" style="font-size:13px; color:#7f7662; flex-shrink:0;">mail</span>
+                                        <span style="font-family:'Be Vietnam Pro',sans-serif; font-size:11px; color:#7f7662;">Para:</span>
+                                        <p class="truncate" style="font-family:'Be Vietnam Pro',sans-serif; font-size:14px; font-weight:600; color:#0d1c2f; max-width:160px;">
+                                            {{ guest.name }}
+                                        </p>
+                                    </div>
+                                    <!-- Tipo + personas -->
+                                    <div class="flex items-center gap-2 flex-wrap mt-0.5 ml-5">
+                                        <p style="font-family:'Be Vietnam Pro',sans-serif; font-size:12px; color:#4d4635;">
+                                            {{ guest.type === 'familia' ? 'Familia' : 'Individual' }}
+                                        </p>
+                                        <span v-if="guest.response && guest.response.attendance === 'yes' && guest.type === 'familia'"
+                                              class="flex items-center gap-1 px-2 py-0.5 rounded-full"
+                                              style="background:rgba(251,211,77,0.3); font-family:'Be Vietnam Pro',sans-serif; font-size:11px; font-weight:600; color:#735c00;">
+                                            <span class="material-symbols-outlined" style="font-size:12px; font-variation-settings:'FILL' 1;">group</span>
+                                            {{ guest.response.guests_count }} persona{{ guest.response.guests_count !== 1 ? 's' : '' }}
+                                        </span>
+                                        <span v-else-if="guest.response && guest.response.attendance === 'no'"
+                                              class="flex items-center gap-1 px-2 py-0.5 rounded-full"
+                                              style="background:rgba(255,218,214,0.5); font-family:'Be Vietnam Pro',sans-serif; font-size:11px; font-weight:600; color:#93000a;">
+                                            <span class="material-symbols-outlined" style="font-size:12px;">person_off</span>
+                                            No asiste
+                                        </span>
+                                    </div>
+                                    <!-- Quién llenó el formulario -->
+                                    <div v-if="guest.response && guest.response.confirmed_name"
+                                         class="flex items-center gap-1 mt-1">
+                                        <span class="material-symbols-outlined" style="font-size:13px; color:#7f7662;">how_to_reg</span>
+                                        <span style="font-family:'Be Vietnam Pro',sans-serif; font-size:11px; color:#7f7662;">Confirmó:</span>
+                                        <strong class="truncate" style="font-family:'Be Vietnam Pro',sans-serif; font-size:12px; color:#4d4635; max-width:120px;">{{ guest.response.confirmed_name }}</strong>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <!-- Para quién va dirigida la invitación -->
-                                <div class="flex items-center gap-1">
-                                    <span class="material-symbols-outlined" style="font-size:14px; color:#7f7662;">mail</span>
-                                    <span style="font-family:'Be Vietnam Pro',sans-serif; font-size:11px; color:#7f7662;">Para:</span>
-                                    <p style="font-family:'Be Vietnam Pro',sans-serif; font-size:14px; font-weight:600; color:#0d1c2f;">
-                                        {{ guest.name }}
-                                    </p>
-                                </div>
-                                <!-- Tipo + personas -->
-                                <div class="flex items-center gap-2 flex-wrap mt-0.5 ml-5">
-                                    <p style="font-family:'Be Vietnam Pro',sans-serif; font-size:12px; color:#4d4635;">
-                                        {{ guest.type === 'familia' ? 'Familia' : 'Individual' }}
-                                    </p>
-                                    <span v-if="guest.response && guest.response.attendance === 'yes' && guest.type === 'familia'"
-                                          class="flex items-center gap-1 px-2 py-0.5 rounded-full"
-                                          style="background:rgba(251,211,77,0.3); font-family:'Be Vietnam Pro',sans-serif; font-size:11px; font-weight:600; color:#735c00;">
-                                        <span class="material-symbols-outlined" style="font-size:12px; font-variation-settings:'FILL' 1;">group</span>
-                                        {{ guest.response.guests_count }} persona{{ guest.response.guests_count !== 1 ? 's' : '' }}
-                                    </span>
-                                    <span v-else-if="guest.response && guest.response.attendance === 'no'"
-                                          class="flex items-center gap-1 px-2 py-0.5 rounded-full"
-                                          style="background:rgba(255,218,214,0.5); font-family:'Be Vietnam Pro',sans-serif; font-size:11px; font-weight:600; color:#93000a;">
-                                        <span class="material-symbols-outlined" style="font-size:12px;">person_off</span>
-                                        No asiste
-                                    </span>
-                                </div>
-                                <!-- Quién llenó el formulario -->
-                                <div v-if="guest.response && guest.response.confirmed_name"
-                                     class="flex items-center gap-1 mt-1">
-                                    <span class="material-symbols-outlined" style="font-size:14px; color:#7f7662;">how_to_reg</span>
-                                    <span style="font-family:'Be Vietnam Pro',sans-serif; font-size:11px; color:#7f7662;">Confirmó:</span>
-                                    <strong style="font-family:'Be Vietnam Pro',sans-serif; font-size:12px; color:#4d4635;">{{ guest.response.confirmed_name }}</strong>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="flex items-center gap-2">
-                            <!-- Status badge -->
-                            <span class="px-3 py-1 rounded-full text-xs flex items-center gap-1"
-                                  :style="badgeStyle(guest.status)">
-                                <span class="material-symbols-outlined" style="font-size:13px;">{{ statusIcon(guest.status) }}</span>
-                                {{ statusLabel(guest.status) }}
-                            </span>
-                            <!-- Copiar link -->
-                            <button
-                                class="rounded-full p-1 transition-colors hover:bg-amber-50"
-                                style="color:#735c00;"
-                                :title="'Copiar link de ' + guest.name"
-                                @click="copyLink(guest)"
-                            >
-                                <span class="material-symbols-outlined" style="font-size:1.1rem;">link</span>
-                            </button>
+                            <!-- Acciones: badge + botón apilados -->
+                            <div class="flex flex-col items-end gap-1.5 flex-shrink-0">
+                                <span class="px-2 py-1 rounded-full text-xs flex items-center gap-1"
+                                      :style="badgeStyle(guest.status)">
+                                    <span class="material-symbols-outlined" style="font-size:12px;">{{ statusIcon(guest.status) }}</span>
+                                    <span class="hidden sm:inline">{{ statusLabel(guest.status) }}</span>
+                                </span>
+                                <button
+                                    class="rounded-full p-1 transition-colors hover:bg-amber-50"
+                                    style="color:#735c00;"
+                                    :title="'Copiar link de ' + guest.name"
+                                    @click="copyLink(guest)"
+                                >
+                                    <span class="material-symbols-outlined" style="font-size:1.1rem;">link</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -181,13 +182,13 @@
             <div v-if="showCreateModal"
                  class="fixed inset-0 z-50 flex items-end md:items-center justify-center"
                  style="background:rgba(13,28,47,0.4); backdrop-filter:blur(4px);">
-                <div class="w-full max-w-md rounded-t-3xl md:rounded-3xl overflow-hidden"
-                     style="background:#f8f9ff; box-shadow:0 -8px 32px rgba(115,92,0,0.12);">
+                <div class="w-full max-w-md rounded-t-3xl md:rounded-3xl overflow-hidden flex flex-col"
+                     style="background:#f8f9ff; box-shadow:0 -8px 32px rgba(115,92,0,0.12); max-height:90dvh;">
                     <!-- Franja decorativa -->
                     <div class="w-full h-1.5"
                          style="background:#e9c33e; background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.3) 10px, rgba(255,255,255,0.3) 20px);"></div>
 
-                    <div class="p-6">
+                    <div class="p-6 overflow-y-auto flex-1" style="overscroll-behavior:contain;">
                         <div class="flex justify-between items-center mb-5">
                             <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.15rem; font-weight:700; color:#735c00;">
                                 🐝 Nueva Invitación
