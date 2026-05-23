@@ -117,13 +117,13 @@
                         </div>
                     </div> -->
                     <div class="max-w-md mx-auto mt-4">
-                        <a  :href="linkId ? '/lugar?link_id=' + linkId : '/lugar'" style="background-color:rgba(255,253,240,0.5);" class="ripple-button group flex flex-col items-center justify-center p-8 bg-white/50 backdrop-blur-sm rounded-3xl border border-primary/5 hover:bg-white/70 transition-all duration-500 relative overflow-hidden scroll-reveal">
+                        <RouterLink :to="linkId ? { path: '/lugar', query: { link_id: linkId } } : '/lugar'" style="background-color:rgba(255,253,240,0.5);" class="ripple-button group flex flex-col items-center justify-center p-8 bg-white/50 backdrop-blur-sm rounded-3xl border border-primary/5 hover:bg-white/70 transition-all duration-500 relative overflow-hidden scroll-reveal">
                             <div class="w-12 h-12 rounded-full bg-primary/5 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                 <span class="material-symbols-outlined text-2xl" data-icon="location_on">location_on</span>
                             </div>
                             <span style="font-family:'Bubblegum Sans',cursive; font-size:13px; color:#4d4635; letter-spacing:0.15em; text-transform:uppercase;">Lugar</span>
                             <span style="font-family:'Itim',cursive; font-size:11px; color:#735c00; margin-top:2px;">Ver mapa y dirección</span>
-                        </a>
+                        </RouterLink>
                     </div>
 
                     <!-- Card Confirmar Asistencia -->
