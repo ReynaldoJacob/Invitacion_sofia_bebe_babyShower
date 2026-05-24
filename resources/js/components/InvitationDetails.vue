@@ -139,14 +139,55 @@ con amor e ilusión esperamos su llegada"
                     </div>
 
                     <!-- Card Mesa de Regalos -->
-                    <div class="max-w-md mx-auto mt-4 mb-8">
-                        <a href="#" style="background-color:rgba(255,253,240,0.5);" class="ripple-button group flex flex-col items-center justify-center p-8 bg-white/50 backdrop-blur-sm rounded-3xl border border-primary/5 hover:bg-white/70 transition-all duration-500 relative overflow-hidden scroll-reveal">
-                            <div class="w-12 h-12 rounded-full bg-primary/5 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-2xl" data-icon="card_giftcard">card_giftcard</span>
+                    <div class="max-w-md mx-auto mt-4 mb-8 scroll-reveal">
+                        <div style="background-color:rgba(255,253,240,0.5); border-radius:1.5rem; border:1px solid rgba(255,255,255,0.6); box-shadow:0 10px 25px -5px rgba(0,0,0,0.1),0 8px 10px -6px rgba(0,0,0,0.1); backdrop-filter:blur(8px); padding:2rem;">
+                            <!-- Ícono y título -->
+                            <div class="flex flex-col items-center gap-2 mb-5">
+                                <div class="rounded-2xl flex items-center justify-center overflow-hidden" style="background:#fff; border:1.5px solid rgba(0,0,0,0.08); width:90px; height:52px;">
+                                    <img src="https://i0.wp.com/rappicard.mx/wp-content/uploads/2024/08/liverpool.png?fit=540%2C280&ssl=1" alt="Liverpool" style="width:78px; height:44px; object-fit:contain;" />
+                                </div>
+                                <span style="font-family:'Bubblegum Sans',cursive; font-size:13px; color:#4d4635; letter-spacing:0.15em; text-transform:uppercase;">Mesa de Regalos</span>
                             </div>
-                            <span style="font-family:'Bubblegum Sans',cursive; font-size:13px; color:#4d4635; letter-spacing:0.15em; text-transform:uppercase;">Mesa de Regalos</span>
-                            <span style="font-family:'Itim',cursive; font-size:11px; color:#735c00; margin-top:2px;">Ver lista de regalos</span>
-                        </a>
+
+                            <!-- Número de lista -->
+                            <div class="flex items-center justify-between gap-3 px-4 py-3 rounded-2xl mb-4"
+                                 style="background:rgba(255,255,255,0.7); border:1px solid rgba(251,211,77,0.3);">
+                                <div class="text-left">
+                                    <p style="font-family:'Be Vietnam Pro',sans-serif; font-size:10px; color:#7f7662; letter-spacing:0.08em; text-transform:uppercase;">Número de lista</p>
+                                    <p style="font-family:'Bubblegum Sans',cursive; font-size:1.5rem; color:#735c00; letter-spacing:0.05em;">52010304</p>
+                                </div>
+                                <button
+                                    @click="copyRegistryNumber"
+                                    class="flex items-center gap-1 px-3 py-1.5 rounded-full transition-all"
+                                    style="background:rgba(251,211,77,0.25); color:#735c00; font-family:'Be Vietnam Pro',sans-serif; font-size:12px; font-weight:600; border:none; cursor:pointer;"
+                                >
+                                    <span class="material-symbols-outlined" style="font-size:14px;">content_copy</span>
+                                    Copiar
+                                </button>
+                            </div>
+
+                            <!-- Botón ver lista -->
+                            <a
+                                href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/52010304"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center justify-center gap-2 w-full py-3 rounded-2xl transition-all"
+                                style="background:rgba(251,211,77,0.35); color:#735c00; font-family:'Be Vietnam Pro',sans-serif; font-size:14px; font-weight:700; text-decoration:none;"
+                            >
+                                <span class="material-symbols-outlined" style="font-size:16px;">open_in_new</span>
+                                Ver en Liverpool
+                            </a>
+
+                            <!-- Toast número copiado -->
+                            <Transition name="fade-toast">
+                                <div v-if="registryCopied"
+                                     class="mt-3 flex items-center justify-center gap-1"
+                                     style="font-family:'Be Vietnam Pro',sans-serif; font-size:12px; color:#2d6a4f;">
+                                    <span class="material-symbols-outlined" style="font-size:14px; font-variation-settings:'FILL' 1;">check_circle</span>
+                                    Número copiado
+                                </div>
+                            </Transition>
+                        </div>
                     </div>
 
                 </div>
@@ -192,6 +233,15 @@ function computeTimeLeft() {
 }
 
 let countdownTimer = null;
+
+// --- Mesa de Regalos: copiar número ---
+const registryCopied = ref(false);
+function copyRegistryNumber() {
+    navigator.clipboard.writeText('52010304').then(() => {
+        registryCopied.value = true;
+        setTimeout(() => { registryCopied.value = false; }, 2500);
+    });
+}
 
 // --- Flying Bees ---
 const beesOverlay = ref(null);
@@ -299,4 +349,6 @@ onUnmounted(() => {
     50%  { transform: translateY(-10px) rotate(5deg); }
     100% { transform: translateY(0px) rotate(0deg); }
 }
+.fade-toast-enter-active, .fade-toast-leave-active { transition: opacity 0.3s; }
+.fade-toast-enter-from, .fade-toast-leave-to      { opacity: 0; }
 </style>
