@@ -268,7 +268,7 @@ function launchBees() {
         const endY   = Math.random() * (window.innerHeight * 0.8);
         const midY   = (startY + endY) / 2 + (Math.random() - 0.5) * 400;
 
-        if (!startLeft) flipWrapper.style.transform = 'scaleX(-1)';
+        if (startLeft) flipWrapper.style.transform = 'scaleX(-1)';
 
         flipWrapper.appendChild(bee);
         beeContainer.appendChild(flipWrapper);
