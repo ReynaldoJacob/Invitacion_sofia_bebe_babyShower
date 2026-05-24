@@ -72,6 +72,9 @@
                 <p style="font-family: 'Be Vietnam Pro', sans-serif; font-size: 18px; color: #715b00; opacity: 0.75; letter-spacing: 0.05em;">
                     Preparando tu invitación...
                 </p>
+                <p style="font-family:'Be Vietnam Pro',sans-serif; font-size:11px; color:rgba(115,92,0,0.5); letter-spacing:0.04em; margin-top:8px;">
+                    Hecha con <span style="color:#fbd34d;">♥</span> amor para nuestra sobrina · <strong style="font-weight:700;">JellyDev</strong>
+                </p>
             </div>
         </div>
     </Transition>

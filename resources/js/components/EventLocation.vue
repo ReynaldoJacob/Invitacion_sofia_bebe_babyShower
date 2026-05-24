@@ -130,7 +130,7 @@
                                 <p style="font-family:'Bubblegum Sans',cursive; font-size:14px; color:#2a5f8a; margin-bottom:2px;">¡El salón cuenta con alberca!</p>
                                 <p style="font-family:'Itim',cursive; font-size:13px; color:#3a6e99; line-height:1.5;">Te recomendamos traer traje de baño y ropa de cambio 👙🩱</p>
                                 <p style="font-family:'Itim',cursive; font-size:13px; color:#3a6e99; line-height:1.5; margin-top:4px;">
-                                    <strong>Nota:</strong> la alberca no cuenta con chapoteadero, te recomendamos traer flotadores si llevas niños pequeños 🤿
+                                    <strong>Nota:</strong> la alberca no cuenta con chapoteadero, te recomendamos traer flotadores 🛟 si llevas niños pequeños
                                 </p>
                             </div>
                         </div>

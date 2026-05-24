@@ -201,6 +201,15 @@ con amor e ilusión esperamos su llegada"
                     src="/images/background.jpg"
                 />
                 <div style="position:absolute; top:0; left:0; right:0; height:55%; background:linear-gradient(to bottom, #f8f9ff 0%, transparent 100%); pointer-events:none; z-index:1;"></div>
+                <!-- Crédito JellyDev -->
+                <div style="position:absolute; bottom:14px; left:0; right:0; text-align:center; z-index:2;">
+                    <span style="display:inline-block; background:rgba(0,0,0,0.35); backdrop-filter:blur(4px); border-radius:999px; padding:4px 14px;">
+                        <p style="font-family:'Be Vietnam Pro',sans-serif; font-size:11px; color:rgba(255,255,255,0.9); letter-spacing:0.04em; margin:0;">
+                            Hecho con <span style="color:#fbd34d;">♥</span> por
+                            <strong style="font-weight:700; letter-spacing:0.06em;">JellyDev</strong>
+                        </p>
+                    </span>
+                </div>
             </div>
         </main>
     </div>
