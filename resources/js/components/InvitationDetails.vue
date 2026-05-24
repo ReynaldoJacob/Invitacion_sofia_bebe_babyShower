@@ -58,8 +58,8 @@
                         <div style="width:1px; height:3rem; background:rgba(115,92,0,0.2);"></div>
                         <div class="text-left" style="font-family:'Itim',cursive;">
                             <div style="font-size:1.125rem; line-height:1.4;">1:00 pm</div>
-                            <div style="font-size:0.875rem; opacity:0.7;">a</div>
-                            <div style="font-size:1.125rem; line-height:1.4;">7:00 pm</div>
+                            <div style="font-size:0.875rem; opacity:0.7; text-align: center;">a</div>
+                            <div style="font-size:1.125rem; line-height:1.4;">8:00 pm</div>
                         </div>
                     </div>
 
