@@ -33,7 +33,7 @@
                         <div style="width:3rem; height:1px; background:rgba(115,92,0,0.3);"></div>
                     </div>
                     <p style="font-family:'Itim',cursive; font-size:15px; color:#4d4635; margin-top:8px;">
-                        Por favor, confirma tu asistencia antes del 1 de Junio.
+                        Por favor, confirma tu asistencia antes del 10 de Junio.
                     </p>
                 </div>
 
@@ -250,7 +250,7 @@
                         <!-- Aviso cambio de opinión -->
                         <p class="mt-4 rounded-2xl px-4 py-3"
                            style="font-family:'Itim',cursive; font-size:13px; color:#7f7662; line-height:1.6; background:rgba(226,224,205,0.3); border:1px solid rgba(115,92,0,0.1);">
-                            💬 ¿Cambiaste de opinión? Puedes volver a responder esta invitación antes del <strong style="color:#735c00;">1 de Junio</strong> y actualizaremos tu confirmación.
+                            💬 ¿Cambiaste de opinión? Puedes volver a responder esta invitación antes del <strong style="color:#735c00;">10 de Junio</strong> y actualizaremos tu confirmación.
                         </p>
 
                         <!-- Botón cerrar -->
@@ -289,7 +289,7 @@
             <div class="flex flex-col items-center justify-center gap-1 py-1 px-5 rounded-full"
                  style="background:rgba(251,211,77,0.25); color:#735c00;">
                 <span class="material-symbols-outlined" style="font-size:1.25rem; font-variation-settings:'FILL' 1;">event_available</span>
-                <span style="font-family:'Itim',cursive; font-size:10px; font-weight:700;">RSVP</span>
+                <span style="font-family:'Itim',cursive; font-size:10px; font-weight:700;">Confirmar</span>
             </div>
         </nav>
 
