@@ -206,7 +206,7 @@ con amor e ilusión esperamos su llegada"
                     <span style="display:inline-block; background:rgba(0,0,0,0.35); backdrop-filter:blur(4px); border-radius:999px; padding:4px 14px;">
                         <p style="font-family:'Be Vietnam Pro',sans-serif; font-size:11px; color:rgba(255,255,255,0.9); letter-spacing:0.04em; margin:0;">
                             Hecho con <span style="color:#fbd34d;">♥</span> por
-                            <strong style="font-weight:700; letter-spacing:0.06em;">JellyDev</strong>
+                            <a href="https://jelly-dev.com" target="_blank" rel="noopener noreferrer" style="font-weight:700; letter-spacing:0.06em; color:inherit; text-decoration:none;">Jelly Dev</a>
                         </p>
                     </span>
                 </div>
