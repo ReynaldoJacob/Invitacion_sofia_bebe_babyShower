@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Naiara Sofía - Bienvenida</title>
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/aida-public/AB6AXuDdBzaE4U2SlRR7lgZGz3xjj-ePY9urCCGI8gG8Y8OyS3Oq4_luWiq6dLab0pSCJYdQmclsh6oOaG-NntTXwTRjQlZqMZ1cW1BBf677KAQ56jhLS1jie7CngMe2wLmg9refAlwWknqKggQkqWA7bxEh4eeMKTFsTB4UGmWLUG7ifaHTHBdj_Zi2GxRQsRI-yxDy0y1-Jq_vo3_Zv0839bHjUgsXPTUtc9cOKsjf9skekhNlYizlNdokCTwEe3Fe5rPwAhNUCuyzlG_e" />
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
