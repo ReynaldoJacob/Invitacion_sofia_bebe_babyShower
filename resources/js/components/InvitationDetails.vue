@@ -118,7 +118,7 @@ con amor e ilusión esperamos su llegada"
                         </div>
                     </div> -->
                     <div class="max-w-md mx-auto mt-4">
-                        <RouterLink :to="linkId ? { path: '/lugar', query: { link_id: linkId } } : '/lugar'" style="background-color:rgba(255,253,240,0.5);" class="ripple-button group flex flex-col items-center justify-center p-8 bg-white/50 backdrop-blur-sm rounded-3xl border border-primary/5 hover:bg-white/70 transition-all duration-500 relative overflow-hidden scroll-reveal">
+                        <RouterLink :to="linkId ? { path: '/lugar', query: { link_id: linkId, nombre: guestName } } : '/lugar'" style="background-color:rgba(255,253,240,0.5);" class="ripple-button group flex flex-col items-center justify-center p-8 bg-white/50 backdrop-blur-sm rounded-3xl border border-primary/5 hover:bg-white/70 transition-all duration-500 relative overflow-hidden scroll-reveal">
                             <div class="w-12 h-12 rounded-full bg-primary/5 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                 <span class="material-symbols-outlined text-2xl" data-icon="location_on">location_on</span>
                             </div>

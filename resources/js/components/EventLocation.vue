@@ -154,7 +154,7 @@
         <!-- Bottom nav mobile -->
         <nav class="fixed bottom-0 left-0 w-full md:hidden z-50 flex justify-around items-center px-4 pb-4 pt-2"
              style="background:rgba(255,255,255,0.88); backdrop-filter:blur(12px); border-top:1px solid rgba(251,211,77,0.3); border-radius:1.5rem 1.5rem 0 0;">
-            <RouterLink :to="linkId ? { path: '/', query: { link_id: linkId } } : '/'" class="flex flex-col items-center justify-center gap-1 py-1 px-3 rounded-full transition-all"
+            <RouterLink :to="linkId ? { path: '/', query: { link_id: linkId, nombre: guestName } } : '/'" class="flex flex-col items-center justify-center gap-1 py-1 px-3 rounded-full transition-all"
                style="color:#4d4635;">
                 <span class="material-symbols-outlined" style="font-size:1.25rem; font-variation-settings:'FILL' 0;">mail</span>
                 <span style="font-family:'Itim',cursive; font-size:10px;">Invitación</span>
@@ -175,6 +175,7 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const linkId = route.query.link_id || '';
+const guestName = route.query.nombre || '';
 
 let revealObserver = null;
 
