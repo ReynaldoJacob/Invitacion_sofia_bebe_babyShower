@@ -244,7 +244,7 @@
                             <p style="font-family:'Itim',cursive; font-size:14px; color:#4d4635;">🩱 Tu traje de baño</p>
                             <p style="font-family:'Itim',cursive; font-size:14px; color:#4d4635;">&#128338; Llegar puntual — 2:00 pm</p>
                             <p style="font-family:'Itim',cursive; font-size:14px; color:#4d4635;">🎁 Tu mejor vibra para Naiara Sofía</p>
-                            <p style="font-family:'Itim',cursive; font-size:14px; color:#4d4635;">📍 Salón "El Trébol" (local B)</p>
+                            <p style="font-family:'Itim',cursive; font-size:14px; color:#4d4635;">&#128205; Campestre Ana Luisa</p>
                         </div>
 
                         <!-- Aviso cambio de opinión -->
