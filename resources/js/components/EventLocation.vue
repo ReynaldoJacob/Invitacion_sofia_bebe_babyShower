@@ -45,7 +45,7 @@
                         <div class="text-center mb-6">
                             <span class="material-symbols-outlined text-primary/50 text-2xl mb-4 block" style="font-variation-settings: 'FILL' 1;">location_on</span>
                             <h2 style="font-family:'Bubblegum Sans',cursive; font-size:1.5rem; color:#4d4635; margin-bottom:6px;">
-                                Salón de Eventos Campestre Ana Luisa
+                                Campestre Ana Luisa
                             </h2>
                             <p style="font-family:'Itim',cursive; font-size:15px; color:#735c00; line-height:1.6;">
                                 Prolongación N.Heroes entrada por la Ecogranja
