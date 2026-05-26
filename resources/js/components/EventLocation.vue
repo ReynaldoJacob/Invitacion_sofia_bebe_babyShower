@@ -45,18 +45,21 @@
                         <div class="text-center mb-6">
                             <span class="material-symbols-outlined text-primary/50 text-2xl mb-4 block" style="font-variation-settings: 'FILL' 1;">location_on</span>
                             <h2 style="font-family:'Bubblegum Sans',cursive; font-size:1.5rem; color:#4d4635; margin-bottom:6px;">
-                                Salón de Eventos "El Trébol" (local B)
+                                Salón de Eventos Campestre Ana Luisa
                             </h2>
                             <p style="font-family:'Itim',cursive; font-size:15px; color:#735c00; line-height:1.6;">
-                                28984 Cdad. de Villa de Álvarez, Col.
+                                Prolongación N.Heroes entrada por la Ecogranja
+                                <br>
+                                Calle Rinconada Bugambilias número 6 <br>Colonia Rincón del Espinal
                             </p>
                         </div>
                          <!-- Foto del salón -->
-                        <div class="rounded-2xl overflow-hidden mb-6"
-                             style="border:1px solid rgba(251,211,77,0.3);">
-                            <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcaA3OUw3vlpXdHlzQIcLuTgChbxfjpKHQUwISQBUkQ40bBclHL01nQZDSCobitZbUszWURlKN-hb_MmxXUBXnsVkjcIC4YmEol59GnUh0tTwYqj1lbnKm29mQysyTpvDXCXdA=s1360-w1360-h1020-rw"
-                                 alt="Salón de Eventos El Trébol"
-                                 style="width:100%; height:200px; object-fit:cover; object-position:center; display:block;" />
+                        <div class="flex justify-center mb-6">
+                            <div style="width:280px; height:280px; border-radius:50%; overflow:hidden; border:3px solid rgba(251,211,77,0.5); box-shadow:0 8px 24px rgba(0,0,0,0.12);">
+                                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEofjiiZ6Yaj3ajFb1WTNsXc_1aAnOToenL_cbjlEU8CMzkVqttAFsLDbjQpOys2FhKAhcWmrudn8-p-3FhAXstvQGrVFQL3t4k4O_YM8FvLZXCBj0n-6xUXg3vXY5bv79Hwjn5d6uZNQ1A=s1360-w1360-h1020-rw"
+                                     alt="Campestre Ana Luisa"
+                                     style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;" />
+                            </div>
                         </div>
                 <div class="overflow-hidden rounded-3xl bg-white/50 backdrop-blur-sm border border-primary/5 shadow-sm scroll-reveal">
                     <div class="px-6 pt-6 pb-4 text-center">
@@ -73,7 +76,7 @@
                                 loading="lazy"
                                 allowfullscreen
                                 referrerpolicy="no-referrer-when-downgrade"
-                                src="https://maps.google.com/maps?q=19.2641668,-103.7837397&z=16&output=embed">
+                                src="https://maps.google.com/maps?q=19.2614755,-103.783152&z=16&output=embed">
                             </iframe>
                       </div>
                     <!-- <img src="/images/croquis.png" alt="Croquis del lugar" class="w-full object-contain" /> -->
@@ -114,7 +117,7 @@
 
                         <!-- Botón Google Maps -->
                          <br><br>
-                        <a href="https://www.google.com/maps/place/Sal%C3%B3n+de+eventos+%22El+Tr%C3%A9bol%22/@19.275199,-103.7822294,13.34z/data=!4m15!1m8!3m7!1s0x8425453ee675017d:0xb7b213275f421382!2sCdad.+de+Villa+de+%C3%81lvarez,+Col.,+M%C3%A9xico!3b1!8m2!3d19.2662338!4d-103.7390574!16s%2Fm%2F02q1744!3m5!1s0x842545b5a172e3cb:0x5a94803413497f21!8m2!3d19.2641668!4d-103.7837397!16s%2Fg%2F11sdq46__1?hl=es-419&entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
+                        <a href="https://maps.app.goo.gl/RTiNBnZdXgn3ZLq89"
                            target="_blank"
                            rel="noopener noreferrer"
                            class="scroll-reveal flex items-center justify-center gap-2 w-full py-4 rounded-full transition-all hover:opacity-90 hover:scale-[1.02]"
@@ -130,7 +133,7 @@
                                 <p style="font-family:'Bubblegum Sans',cursive; font-size:14px; color:#2a5f8a; margin-bottom:2px;">¡El salón cuenta con alberca!</p>
                                 <p style="font-family:'Itim',cursive; font-size:13px; color:#3a6e99; line-height:1.5;">Te recomendamos traer traje de baño y ropa de cambio 👙🩱</p>
                                 <p style="font-family:'Itim',cursive; font-size:13px; color:#3a6e99; line-height:1.5; margin-top:4px;">
-                                    <strong>Nota:</strong> la alberca no cuenta con chapoteadero, te recomendamos traer flotadores 🛟 si llevas niños pequeños
+                                    &#128703; El lugar cuenta con chapoteadero para los más pequeños
                                 </p>
                             </div>
                         </div>

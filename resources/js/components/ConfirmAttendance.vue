@@ -242,7 +242,7 @@
                              style="background:rgba(251,211,77,0.15); border:1px solid rgba(233,195,62,0.35);">
                             <p style="font-family:'Bubblegum Sans',cursive; font-size:13px; color:#735c00; margin-bottom:4px;">Recuerda llevar:</p>
                             <p style="font-family:'Itim',cursive; font-size:14px; color:#4d4635;">🩱 Tu traje de baño</p>
-                            <p style="font-family:'Itim',cursive; font-size:14px; color:#4d4635;">� Llegar puntual — 2:00 pm</p>
+                            <p style="font-family:'Itim',cursive; font-size:14px; color:#4d4635;">&#128338; Llegar puntual — 2:00 pm</p>
                             <p style="font-family:'Itim',cursive; font-size:14px; color:#4d4635;">🎁 Tu mejor vibra para Naiara Sofía</p>
                             <p style="font-family:'Itim',cursive; font-size:14px; color:#4d4635;">📍 Salón "El Trébol" (local B)</p>
                         </div>
