@@ -32,9 +32,6 @@
                         <span style="font-size:1.1rem;">🐝</span>
                         <div style="width:3rem; height:1px; background:rgba(115,92,0,0.3);"></div>
                     </div>
-                    <p style="font-family:'Itim',cursive; font-size:15px; color:#4d4635; margin-top:8px;">
-                        Por favor, confirma tu asistencia antes del 10 de Junio.
-                    </p>
                 </div>
 
                 <!-- Chip: a quién va dirigida la invitación -->
@@ -250,7 +247,7 @@
                         <!-- Aviso cambio de opinión -->
                         <p class="mt-4 rounded-2xl px-4 py-3"
                            style="font-family:'Itim',cursive; font-size:13px; color:#7f7662; line-height:1.6; background:rgba(226,224,205,0.3); border:1px solid rgba(115,92,0,0.1);">
-                            💬 ¿Cambiaste de opinión? Puedes volver a responder esta invitación antes del <strong style="color:#735c00;">10 de Junio</strong> y actualizaremos tu confirmación.
+                            💬 ¿Cambiaste de opinión? Puedes volver a responder esta invitación y actualizaremos tu confirmación.
                         </p>
 
                         <!-- Botón cerrar -->

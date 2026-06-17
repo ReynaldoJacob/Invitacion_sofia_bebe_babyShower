@@ -134,7 +134,6 @@ con amor e ilusión esperamos su llegada"
                                 <span class="material-symbols-outlined text-2xl" data-icon="favorite_border">favorite_border</span>
                             </div>
                             <span style="font-family:'Bubblegum Sans',cursive; font-size:13px; color:#4d4635; letter-spacing:0.15em; text-transform:uppercase;">Confirmar Asistencia</span>
-                            <span style="font-family:'Itim',cursive; font-size:11px; color:#735c00; margin-top:2px;">Antes del 10 de Junio</span>
                         </RouterLink>
                     </div>
 

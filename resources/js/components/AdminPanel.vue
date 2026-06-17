@@ -373,7 +373,7 @@ Hola, *${name}* 🌸
 
 Tenemos el gusto de invitarte al baby shower de nuestra pequeña abejita que viene en camino.
 
-Confirma tu asistencia antes del *10 de Junio* en tu invitación personalizada:
+Confirma tu asistencia en tu invitación personalizada:
 👉 ${link}
 
 ¡Te esperamos con mucho amor! 💛🐝`;
